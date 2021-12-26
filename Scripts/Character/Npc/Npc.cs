@@ -93,7 +93,7 @@ public class Npc : CharacterBehaviour
                                 targetLookAt.transform.localPosition =
                                     new Vector3(joystick.Horizontal * 2, 0, joystick.Vertical * 2);
                                 var rotLookAt = Quaternion.LookRotation(targetLookAt.localPosition);
-                                transform.rotation = Quaternion.Slerp(transform.rotation, rotLookAt, rotSpeed * 2 * Time.deltaTime);
+                                transform.localRotation = Quaternion.Slerp(transform.localRotation, rotLookAt, rotSpeed * 2 * Time.deltaTime);
                             }
                         }
                         else
